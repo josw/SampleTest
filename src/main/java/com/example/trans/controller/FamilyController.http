@@ -1,0 +1,8 @@
+### PUT
+PUT http://localhost:8080/parent?name=jjjj
+
+### GET
+GET http://localhost:8080/parent/1
+
+### relate
+PUT http://localhost:8080/relate2
