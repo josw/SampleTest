@@ -7,3 +7,6 @@ spring:
     username: root
     password: 11111111
     driver-class-name: com.mysql.cj.jdbc.Driver
+  devtools:
+    restart:
+      enabled: false

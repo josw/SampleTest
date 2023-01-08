@@ -4,9 +4,11 @@ import com.example.trans.repository.ChildRepository;
 import com.example.trans.repository.entity.Child;
 import com.example.trans.repository.entity.Parent;
 import com.example.trans.repository.ParentRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @Service
@@ -16,6 +18,10 @@ public class FamilyService {
     private final ChildRepository childRepository;
 
     private final SecondService secondService;
+
+    public List<Parent> getFamily() {
+        return parentRepository.findAll();
+    }
 
     public Parent getParent(Long id) {
         return parentRepository.findById(id).orElse(null);

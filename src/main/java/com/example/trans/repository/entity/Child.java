@@ -1,7 +1,8 @@
 package com.example.trans.repository.entity;
 
-import jakarta.persistence.*;
 import lombok.*;
+
+import javax.persistence.*;
 
 @Builder
 @Setter
